@@ -1,0 +1,15 @@
+{
+  "name": "algo-roman-numerals",
+  "version": "1.0.0",
+  "main": "romanNumerals.js",
+  "scripts": {
+    "start": "node romanNumerals.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Michael Termotto",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.6.4"
+  }
+}
