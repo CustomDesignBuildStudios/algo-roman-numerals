@@ -20,15 +20,15 @@ describe("tests toRomanLazy", () => {
 });
 
 describe("tests toRoman", () => {
-    test("toRoman(4) === 'IV'", () => {
-        expect(toRoman(4)).toBe("IV");
+    test("toRoman(4,false) === 'IV'", () => {
+        expect(toRoman(4,false)).toBe("IV");
       });
 
-      test("toRoman(150) === 'CL'", () => {
-        expect(toRoman(150)).toBe("CL");
+      test("toRoman(150,false) === 'CL'", () => {
+        expect(toRoman(150,false)).toBe("CL");
       });
 
-      test("toRoman(944) === 'CMXLIV'", () => {
-        expect(toRoman(944)).toBe("CMXLIV");
+      test("toRoman(944,false) === 'CMXLIV'", () => {
+        expect(toRoman(944,false)).toBe("CMXLIV");
       });
 });

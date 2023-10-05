@@ -14,12 +14,32 @@ const roman_numerals=[
   {name:"M",value:1000}
 ];
 
-function toRomanLazy(num) {
+// function toRomanLazy(num) {
+//   let roman = ""
+//   for(let x = roman_numerals.length-1; x >= 0; x--){
+//     if(roman_numerals[x].isSpecial)
+//       continue;
+
+//     amount_divides = Math.floor(num / roman_numerals[x].value);
+
+
+//     if(amount_divides > 0){
+//       roman = roman + roman_numerals[x].name.repeat(amount_divides)
+//       num = num - (amount_divides * roman_numerals[x].value)
+//       if(num == 0) return roman;
+//     }
+//   }
+//   return "Error";
+// }
+
+function toRoman(num, isLazy = true) {
   let roman = ""
   for(let x = roman_numerals.length-1; x >= 0; x--){
-    if(roman_numerals[x].isSpecial)
+
+    if(roman_numerals[x].isSpecial && isLazy)
       continue;
 
+
     amount_divides = Math.floor(num / roman_numerals[x].value);
 
 
@@ -32,20 +52,6 @@ function toRomanLazy(num) {
   return "Error";
 }
 
-function toRoman(num) {
-  let roman = ""
-  for(let x = roman_numerals.length-1; x >= 0; x--){
-    amount_divides = Math.floor(num / roman_numerals[x].value);
-
-
-    if(amount_divides > 0){
-      roman = roman + roman_numerals[x].name.repeat(amount_divides)
-      num = num - (amount_divides * roman_numerals[x].value)
-      if(num == 0) return roman;
-    }
-  }
-  return "Error";
-}
-
+console.log(toRoman(154,false));
 
 module.exports = { toRoman, toRomanLazy };
